@@ -68,12 +68,12 @@ def view_order(order_id):
     if token:
         conn = db.get_db()
         cur = conn.cursor()
-        query = '''SELECT BIN_TO_UUID(order_id) order_id, serial_number, order_name, order_type, order_description, uploaded_at FROM `order` WHERE order_id = UUID_TO_BIN('{}')'''.format(order_id)
+        query = '''SELECT BIN_TO_UUID(order_id) order_id, BIN_TO_UUID(client_id) client_id, payment_method, order_location, ordered_at FROM `order` WHERE order_id = UUID_TO_BIN('{}') ORDER BY ordered_at DESC LIMIT 1'''.format(order_id)
         cur.execute(query)
         conn.commit()
         result = cur.fetchone()
         if not result:
-            return make_response({'status': 0, 'message': 'order not found'}, 404)
+            return make_response({'status': 0, 'message': 'Order not found'}, 404)
         return make_response({'status': 1, 'message': 'Request successful', 'data': result}, 200)
     else:
         return make_response({'status': 0, 'message': 'Must be logged in to complete this request'}, 401)
@@ -87,14 +87,14 @@ def edit_order(order_id):
 
     form_data = request.get_json()
 
-    edit_query = '''UPDATE `order` SET serial_number = '{}', order_name = '{}', order_type = '{}', order_description = '{}' WHERE order_id=UUID_TO_BIN('{}') LIMIT 1'''.format(form_data["serial_number"], form_data["order_name"], form_data["order_type"], form_data["order_description"], order_id)
+    edit_query = '''UPDATE `order` SET payment_method = '{}', order_location = '{}' WHERE order_id = UUID_TO_BIN('{}') LIMIT 1'''.format(form_data["payment_method"], form_data["order_location"], order_id)
     conn = db.get_db()
     cur = conn.cursor()
     result = cur.execute(edit_query)
     conn.commit()
 
     if result < 1:
-        return make_response({'status': 1, 'message': 'Server Error. Could not upload order!'}, 500)
+        return make_response({'status': 1, 'message': 'Server Error. Could not update order!'}, 500)
 
     return make_response({'status': 1, 'message': 'Request Successful'}, 200)
 
@@ -117,7 +117,7 @@ def delete_order(order_id):
         if result > 0:
             return make_response({'status': 1, 'message': 'Request successful'}, 200)
 
-        return make_response({'status': 1, 'message': 'order not found'}, 200)
+        return make_response({'status': 1, 'message': 'Order not found'}, 200)
 
     else:
         return make_response({'status': 0, 'message': 'Must be logged in to complete this request'}, 401)

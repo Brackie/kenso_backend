@@ -82,7 +82,7 @@ def edit_product(product_id):
     conn.commit()
 
     if result < 1:
-        return make_response({'status': 1, 'message': 'Server Error. Could not upload product!'}, 500)
+        return make_response({'status': 1, 'message': 'Server Error. Could not update product!'}, 500)
 
     return make_response({'status': 1, 'message': 'Request Successful'}, 200)
 
