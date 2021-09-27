@@ -1,0 +1,681 @@
+{
+	"info": {
+		"_postman_id": "5cd9d3ff-6733-4f9f-a391-45563f284491",
+		"name": "kenso",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "admin/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"muimikieleko@gmail.com\",\r\n    \"pwd\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "admin/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\": \"Braxton Muimi\",\r\n    \"email\": \"muimikieleko@gmail.com\",\r\n    \"phone_number\": \"0713398529\",\r\n    \"pwd\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/admin/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"admin",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"muimikieleko@gmail.com\",\r\n    \"pwd\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/client/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"client",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client/register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\": \"Braxton Muimi\",\r\n    \"email\": \"muimikieleko@gmail.com\",\r\n    \"phone_number\": \"0713398529\",\r\n    \"address\": \"Westlands Pride, Waiyaki Way\",\r\n    \"pwd\": \"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/client/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"client",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "client/profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MDgwMjksInR5cCI6ImNsaWVudCIsInN1YiI6IjU5NWRjZmU1LTFmNzEtMTFlYy04MjczLTQ4YmE0ZTU4MDZhOCJ9.SAUl_4B4UC8qJhTxIX2X-7b8P0sEOcBhoJKBxsYFh50",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/client/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"client",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product/upload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial_number\": \"SN-234PO6Y\",\r\n    \"product_name\": \"Impeller Pump\",\r\n    \"product_type\": \"Pumps\",\r\n    \"product_description\": \"Impeller pump for all pumping needs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/product/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product/all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/product/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product/view",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/product/view/946f9315-1f78-11ec-8273-48ba4e5806a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product",
+						"view",
+						"946f9315-1f78-11ec-8273-48ba4e5806a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial_number\": \"SN-234PO6Y7\",\r\n    \"product_name\": \"Impeller Pump\",\r\n    \"product_type\": \"Pump\",\r\n    \"product_description\": \"Impeller pump for all pumping needs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/product/update/946f9315-1f78-11ec-8273-48ba4e5806a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"product",
+						"update",
+						"946f9315-1f78-11ec-8273-48ba4e5806a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "product/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial_number\": \"SN-234PO6Y\",\r\n    \"product_name\": \"Impeller Pump\",\r\n    \"product_type\": \"Pumps\",\r\n    \"product_description\": \"Impeller pump for all pumping needs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/order/delete/946f9315-1f78-11ec-8273-48ba4e5806a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"delete",
+						"946f9315-1f78-11ec-8273-48ba4e5806a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order/upload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MjM2ODUsInR5cCI6ImNsaWVudCIsInN1YiI6ImNlNTljZDViLTFmOTUtMTFlYy04MjczLTQ4YmE0ZTU4MDZhOCJ9.qejHkKbz5OZHDFTwmV__KmDP4VS6ZJ3Mh1BzX652adI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payment_method\": \"mpesa\",\r\n    \"order_location\": \"Westlands Pride, Waiyaki Way\",\r\n    \"items\": [\r\n        {\r\n            \"product_id\":\"32f3af53-1f96-11ec-8273-48ba4e5806a8\",\r\n            \"quantity\": 1\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/order/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order/all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MjM2ODUsInR5cCI6ImNsaWVudCIsInN1YiI6ImNlNTljZDViLTFmOTUtMTFlYy04MjczLTQ4YmE0ZTU4MDZhOCJ9.qejHkKbz5OZHDFTwmV__KmDP4VS6ZJ3Mh1BzX652adI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/order/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order/view",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/order/view/d136d2fc-1fd2-11ec-8273-48ba4e5806a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"view",
+						"d136d2fc-1fd2-11ec-8273-48ba4e5806a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"payment_method\": \"cash\",\r\n    \"order_location\": \"Westlands Pride, Waiyaki Way\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/order/update/94d9eed8-1f96-11ec-8273-48ba4e5806a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"update",
+						"94d9eed8-1f96-11ec-8273-48ba4e5806a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "order/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial_number\": \"SN-234PO6Y\",\r\n    \"product_name\": \"Impeller Pump\",\r\n    \"product_type\": \"Pumps\",\r\n    \"product_description\": \"Impeller pump for all pumping needs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/order/delete/94d9eed8-1f96-11ec-8273-48ba4e5806a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"delete",
+						"94d9eed8-1f96-11ec-8273-48ba4e5806a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback/upload",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MjM2ODUsInR5cCI6ImNsaWVudCIsInN1YiI6ImNlNTljZDViLTFmOTUtMTFlYy04MjczLTQ4YmE0ZTU4MDZhOCJ9.qejHkKbz5OZHDFTwmV__KmDP4VS6ZJ3Mh1BzX652adI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"subject\": \"Test Subject\",\r\n    \"message\": \"Lorem Ipsum Dolres, or whatever they say...\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/feedback/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"feedback",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback/all",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MjM2ODUsInR5cCI6ImNsaWVudCIsInN1YiI6ImNlNTljZDViLTFmOTUtMTFlYy04MjczLTQ4YmE0ZTU4MDZhOCJ9.qejHkKbz5OZHDFTwmV__KmDP4VS6ZJ3Mh1BzX652adI",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/feedback/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"feedback",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback/view",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/feedback/view/a49ad720-1fd4-11ec-8273-48ba4e5806a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"feedback",
+						"view",
+						"a49ad720-1fd4-11ec-8273-48ba4e5806a8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "feedback/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MTA0NDIsInR5cCI6ImFkbWluIiwic3ViIjoiN2ZkNjEzZjQtMWY2ZS0xMWVjLTgyNzMtNDhiYTRlNTgwNmE4In0.iLSPul4bTBFTVCfkbqxcLUn-Wcgh6Ejgr-ZTYmEJnVo",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"serial_number\": \"SN-234PO6Y\",\r\n    \"product_name\": \"Impeller Pump\",\r\n    \"product_type\": \"Pumps\",\r\n    \"product_description\": \"Impeller pump for all pumping needs\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/order/delete/94d9eed8-1f96-11ec-8273-48ba4e5806a8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"order",
+						"delete",
+						"94d9eed8-1f96-11ec-8273-48ba4e5806a8"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzM2MDgwMjksInR5cCI6ImNsaWVudCIsInN1YiI6IjU5NWRjZmU1LTFmNzEtMTFlYy04MjczLTQ4YmE0ZTU4MDZhOCJ9.SAUl_4B4UC8qJhTxIX2X-7b8P0sEOcBhoJKBxsYFh50"
+		}
+	]
+}
