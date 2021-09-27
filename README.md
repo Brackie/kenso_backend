@@ -9,6 +9,7 @@ A water pump sales backend done in Flask (https://flask.palletsprojects.com/en/2
 
 ### Python installations
 > cd current_directory (./ -> kenso)
+
 > pip install -r ./requirments.txt
 
 ## Config
@@ -21,6 +22,7 @@ Refer to ./app/schema.sql for 'db_name'
 To initialize tables:
 - Login to mysql console
 > cd current_dir (./ -> kenso)
+
 > mysql -u user_name -p db_name
 
 - Once in the shell
@@ -30,18 +32,28 @@ To initialize tables:
 Once all libraries are installed
 - Linux
 > $ export FLASK_APP='./app'
+
 > $ export FLASK_ENV='development'
+
 > $ flask run
+
 > Running on http://127.0.0.1:5000/
+
 
 - Windows CMD
 > set FLASK_APP='./app'
+
 > set FLASK_ENV='development'
+
 > flask run
+
 > Running on http://127.0.0.1:5000/
 
 - Windows Powershel
 > $env:FLASK_APP="./app"
+
 > $env:FLASK_ENV="development"
+
 > flask run
+
 > Running on http://127.0.0.1:5000/
