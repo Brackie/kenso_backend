@@ -16,8 +16,8 @@ A water pump sales backend done in Flask (https://flask.palletsprojects.com/en/2
 Copy ./config.py.example >> ./config.py
 
 ### Database config
-Edit ./config.py to desired database values
-Refer to ./app/schema.sql for 'db_name'
+- Edit ./config.py to desired database values
+- Refer to ./app/schema.sql for 'db_name'
 
 To initialize tables:
 - Login to mysql console
@@ -57,3 +57,8 @@ Once all libraries are installed
 > flask run
 
 > Running on http://127.0.0.1:5000/
+
+## Postman Collection
+- Open postman
+- File > Import > Upload files
+- Select collection at ./kenso.postman_collection.json
